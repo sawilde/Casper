@@ -800,7 +800,7 @@ body.nav-opened .nav {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     display: inline-block;
-    float: right;
+    /*float: right;*/
     height: 38px;
     padding: 0 15px;
     border-style: solid;
@@ -813,6 +813,10 @@ body.nav-opened .nav {
     white-space: nowrap;
     border-radius: 3px;
     transition: all 0.5s ease;
+    position: fixed;
+    top: 3em;
+    right: 5em;
+    
 }
 .menu-button:before {
     font-size: 12px;
@@ -849,7 +853,7 @@ body.nav-opened .nav {
 
 /* When the navigation is opened */
 .nav-opened .menu-button {
-    padding: 0 12px;
+    padding: 0 8px;
     background: #111;
     border-color: #111;
     color: #fff;
