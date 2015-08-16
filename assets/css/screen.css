@@ -802,14 +802,18 @@ body.nav-opened .nav {
     position: fixed;
     top: 3em;
     right: 5em;
-    
+    background: #fff;
 }
+
 .menu-button:before {
     font-size: 12px;
     font-weight: bold;
     margin-right: 6px;
     position: relative;
     top: 1px;
+    background: #fff;
+    border-color: #BFC8CD;
+    color: #9EABB3;
 }
 .menu-button:hover {
     background: #fff;
@@ -820,21 +824,17 @@ body.nav-opened .nav {
 
 /* When the navigation is closed */
 .nav-closed .menu-button {
-    color: #fff;
-    border-color: rgba(255, 255, 255, 0.6);
+    border-color: #999;
 }
 .nav-closed .menu-button:hover {
-    color: #222;
+    border-color: #444;
+    color: #444;
 }
 
 /* When the navigation is closed and there is no cover image */
 .nav-closed .no-cover .menu-button {
-    border-color: #BFC8CD;
-    color: #9EABB3;
 }
 .nav-closed .no-cover .menu-button:hover {
-    border-color: #555;
-    color: #555;
 }
 
 /* When the navigation is opened */
