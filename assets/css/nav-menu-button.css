@@ -1,0 +1,69 @@
+.nav-menu-button {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    /*float: right;*/
+    height: 38px;
+    padding: 0 15px;
+    border-style: solid;
+    border-width: 1px;
+    opacity: 1;
+    text-align: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    line-height: 35px;
+    white-space: nowrap;
+    border-radius: 3px;
+    transition: all 0.5s ease;
+    position: fixed;
+    top: 3em;
+    right: 5em;
+    background: #fff;
+}
+
+.nav-menu-button:before {
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 6px;
+    position: relative;
+    top: 1px;
+    background: #fff;
+    border-color: #BFC8CD;
+    color: #9EABB3;
+}
+.nav-menu-button:hover {
+    background: #fff;
+}
+.nav-menu-button:focus {
+    outline: 0;
+}
+
+/* When the navigation is closed */
+.nav-closed .nav-menu-button {
+    border-color: #999;
+}
+.nav-closed .nav-menu-button:hover {
+    border-color: #444;
+    color: #444;
+}
+
+/* When the navigation is closed and there is no cover image */
+.nav-closed .no-cover .nav-menu-button {
+}
+.nav-closed .no-cover .nav-menu-button:hover {
+}
+
+/* When the navigation is opened */
+.nav-opened .nav-menu-button {
+    padding: 0 8px;
+    background: #111;
+    border-color: #111;
+    right: 324px;
+    z-index: 400;
+    color: #fff;
+    -webkit-transform: translate3D(94px, 0, 0);
+        -ms-transform: translate3D(94px, 0, 0);
+            transform: translate3D(94px, 0, 0);
+    transition: all 0.3s ease;
+}

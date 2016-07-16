@@ -912,17 +912,14 @@ body.nav-opened .nav {
 .nav-closed .no-cover .menu-button:hover {
 }
 
+
 /* When the navigation is opened */
 .nav-opened .menu-button {
-    padding: 0 8px;
-    background: #111;
-    border-color: #111;
-	right: 304px;
-	z-index: 400;
+    opacity: 0;
     color: #fff;
-    -webkit-transform: translate3D(94px, 0, 0);
-        -ms-transform: translate3D(94px, 0, 0);
-            transform: translate3D(94px, 0, 0);
+    -webkit-transform: translate3D(240px, 0, 0);
+        -ms-transform: translate3D(240px, 0, 0);
+            transform: translate3D(240px, 0, 0);
     transition: all 0.3s ease;
 }
 
