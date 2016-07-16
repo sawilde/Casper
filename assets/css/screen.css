@@ -917,6 +917,8 @@ body.nav-opened .nav {
     padding: 0 8px;
     background: #111;
     border-color: #111;
+	right: 304px;
+	z-index: 400;
     color: #fff;
     -webkit-transform: translate3D(94px, 0, 0);
         -ms-transform: translate3D(94px, 0, 0);
