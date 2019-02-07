@@ -13,11 +13,11 @@
         <p>{{excerpt words="26"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
     </section>
     <footer class="post-meta">
-        {{#if author.image}}<img class="author-thumb" src="{{author.image}}" alt="{{author.name}}" nopin="nopin" />{{/if}}
+        {{#if author.profile_image}}<img class="author-thumb" src="{{author.profile_image}}" alt="{{author.name}}" nopin="nopin" />{{/if}}
         {{author}}
         {{tags prefix=" on "}}
         <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time>
-        <a class="post-disqus-comment-count" href="{{url}}#disqus_thread" data-disqus-identifier="ghost-{{id}}"></a>
+        <a class="post-disqus-comment-count" href="{{url}}#disqus_thread" data-disqus-identifier="ghost-{{comment_id}}"></a>
     </footer>
 </article>
 {{/foreach}}
