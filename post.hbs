@@ -34,8 +34,7 @@ into the {body} of the default.hbs template --}}
 
             <section class="post-full-content">
                 <div class="post-content">
-                    {{content}}
-                </div>
+                    {{content}}              
             </section>
 
             {{!-- Email subscribe form at the bottom of the page --}}
@@ -59,14 +58,25 @@ into the {body} of the default.hbs template --}}
                 {{else}}
                     {{> "byline-single"}}
                 {{/has}}
-
             </footer>
 
-            {{!--
             <section class="post-full-comments">
-                If you want to embed comments, this is a good place to do it!
+              <div id="disqus_thread"></div>
+                <script type="text/javascript">
+                  /* * * CONFIGURATION VARIABLES * * */
+                  var disqus_shortname = 'many-monkeys';
+                  var disqus_identifier = 'ghost-{{comment_id}}';
+                  
+                  /* * * DON'T EDIT BELOW THIS LINE * * */
+                  (function() {
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                  })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+              </div>
             </section>
-            --}}
 
         </article>
 
