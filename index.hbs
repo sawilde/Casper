@@ -29,8 +29,33 @@ into the {body} of the default.hbs template --}}
                 {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
                 {{> "post-card"}}
 
+                {{#if @first}}
+                <div class="algolia-search" >
+                  <input type="search" placeholder="Search posts" id="search-input" />
+                </div>
+                {{/if}}
             {{/foreach}}
         </div>
 
     </div>
+    
+    <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+    <script>
+      var client = algoliasearch('94Y9VHH6O4', '888a2872fa5c97504b2fc816b7247aa6')
+      var index = client.initIndex('siteIndex');
+      autocomplete('#search-input', { hint: false }, [
+        {
+          source: autocomplete.sources.hits(index, { hitsPerPage: 7 }),
+          templates: {
+            suggestion: function(suggestion) {
+              return suggestion._highlightResult.title.value.link(suggestion.url);
+            }
+          }
+        }
+      ]).on('autocomplete:selected', function(event, suggestion, dataset) {
+        console.log(suggestion, dataset);
+      });
+    </script>
+    
 </main>
