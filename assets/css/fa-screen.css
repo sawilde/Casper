@@ -1,0 +1,23 @@
+/* Apply these base styles to all font awesome icons */
+[class^="fa-"]:before, [class*=" fa-"]:before {
+    font-family: "FontAwesome", "Open Sans", sans-serif;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    text-decoration: none !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.share .fa-twitter-square:hover {
+    color: #55acee;
+}
+.share .fa-facebook-square:hover {
+    color: #3b5998;
+}
+.share .fa-linkedin:hover {
+    color: #0077b5;
+}
