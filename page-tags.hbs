@@ -14,25 +14,16 @@
 
 {{!-- The main content area --}}
 <main id="site-main" class="site-main outer">
-    <style scoped>
-    .inner-page-tags {
-        margin-top: inherit;
-    }
-      
-    @media (min-width: 900px) {
-      .inner-page-tags {
-        margin-top: -8vw;
-      }
-    }
-    </style>
-    <div class="inner inner-page-tags">                    
-        <div class="post-feed">
-            {{#get 'tags' limit='all' include='count.posts' order='count.posts desc'}}
-            {{#foreach tags}}
-                {{!-- The tag below includes the markup for each tag - partials/tag-card.hbs --}}
-                {{> "tag-card"}}
-            {{/foreach}}
-            {{/get}}
+    <div class="inner inner-page-tags">
+        <div class="tag-feed">    
+            <div class="post-feed">
+                {{#get 'tags' limit='all' include='count.posts' order='count.posts desc'}}
+                {{#foreach tags}}
+                    {{!-- The tag below includes the markup for each tag - partials/tag-card.hbs --}}
+                    {{> "tag-card"}}
+                {{/foreach}}
+                {{/get}}
+            </div>
         </div>
     </div>
 </main>

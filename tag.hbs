@@ -23,11 +23,13 @@
 {{!-- The main content area --}}
 <main id="site-main" class="site-main outer">
     <div class="inner">
-        <div class="post-feed">
-            {{#foreach posts}}
-                {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
-                {{> "post-card"}}
-            {{/foreach}}
+        <div class="tag-feed">
+            <div class="post-feed">
+                {{#foreach posts}}
+                    {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+                    {{> "post-card"}}
+                {{/foreach}}
+            </div>
         </div>
     </div>
 </main>
