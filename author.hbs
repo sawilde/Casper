@@ -40,15 +40,15 @@
 {{!-- The main content area --}}
 <main id="site-main" class="site-main outer">
     <div class="inner">
+        <div class="flex-feed">    
+          <div class="post-feed">
+              {{#foreach posts}}
 
-        <div class="post-feed">
-            {{#foreach posts}}
+                  {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+                  {{> "post-card"}}
 
-                {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
-                {{> "post-card"}}
-
-            {{/foreach}}
+              {{/foreach}}
+          </div>
         </div>
-
     </div>
 </main>
